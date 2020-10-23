@@ -1,13 +1,12 @@
 package timeConverter;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class Timer{
+public class Timer {
 
-    public  static String quickSort(int[] arr){
+    public  static Integer[] quickSort(int[] arr){
 
         List<Integer> left = new ArrayList<>();
         List<Integer> equaler = new ArrayList<>();
@@ -37,15 +36,17 @@ public class Timer{
         Collections.sort(result);
 
         Integer[] resultArray = new Integer[result.size()];
-        resultArray = result.toArray(resultArray);
 
-        return Arrays.toString(resultArray);
+        for (int i=0; i < result.size(); i++)
+        {
+            resultArray[i] = result.get(i).intValue();
+        }
+        return resultArray;
     }
 
     public static void main(String[] args) {
+        int[] array = { 5, 4, 3, 8, 7 };
 
-        int[] arr = { 5, 4, 5, 6, 7, 5, 9, 5, 3, 10, 4, 7, 2 };
-
-        System.out.println(quickSort(arr));
+        System.out.println(quickSort(array));
     }
 }
