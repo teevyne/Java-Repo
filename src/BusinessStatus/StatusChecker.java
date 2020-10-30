@@ -1,56 +1,38 @@
 package BusinessStatus;
 
-public class StatusChecker {
+public class StatusChecker{
 
-    private boolean alwaysOpen;
     private boolean open;
-    private boolean closed;
+    private boolean alwaysOpen;
 
     public StatusChecker(){
         this.open = false;
         this.alwaysOpen = false;
-        this.closed = false;
     }
 
-//    public String setAlwaysOpen(){
-//        alwaysOpen = true;
-//        return String.format("Always open");
-//    }
-//
-//    public String setClosed() {
-//        closed = true;
-//        return String.format("Closed");
-//    }
-//
-//    public String setOpen() {
-//        open = true;
-//        return String.format("Open");
-//    }
-
-    public void setAlwaysOpen(){
-        System.out.println("Always open");
+    public void alwaysOpenShop(){
+        System.out.println("We are alwsys here for you; open for business");
         alwaysOpen = true;
+        open = false;
     }
 
-    public void setOpen(){
-        System.out.println("Open");
+    public void openShop(){
+        System.out.println("We are now open for business");
         open = true;
+        alwaysOpen = false;
     }
 
-    public void setClosed() {
-        System.out.println("Closed");
-        closed = true;
+    public void closeShop(){
+        System.out.println("Now we are closed for business");
+        open = false;
+//        alwaysOp/en = false;
     }
 
     public boolean isOpen(){
         return open;
     }
 
-    public boolean isAlwaysOpen(){
-        return alwaysOpen;
-    }
-
-    public boolean isClosed(){
-        return closed;
-    }
+//    public boolean isAlwaysOpen(){
+//        return alwaysOpen;
+//    }
 }

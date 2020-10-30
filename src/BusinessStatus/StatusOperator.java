@@ -1,25 +1,22 @@
 package BusinessStatus;
 
-import BusinessStatus.StatusChecker;
-
-public class StatusOperator {
+public class StatusOperator{
 
     private StatusChecker statusChecker;
 
-    public StatusOperator(StatusChecker statusChecker){
-        this.statusChecker = statusChecker;
+    public StatusOperator(StatusChecker aChecker){
+        this.statusChecker = aChecker;
     }
 
-    public void getStatus(boolean status){
-        if (statusChecker.isAlwaysOpen()){
-            statusChecker.setAlwaysOpen();
+    public void pressButton() {
+        System.out.println("Setting business status");
+        if(statusChecker.isAlwaysOpen()){
+            statusChecker.alwaysOpenShop();
         }
-
-        else if (statusChecker.isOpen()){
-            statusChecker.setOpen();
-        }
-        else if (statusChecker.isClosed()){
-            statusChecker.setClosed();
+        if (statusChecker.isOpen()) {
+            statusChecker.openShop();
+        } else {
+            statusChecker.closeShop();
         }
     }
 }
