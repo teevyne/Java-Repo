@@ -9,6 +9,7 @@ public class DogDoor {
 
 
     public DogDoor(){
+
         this.open = false;
     }
 
