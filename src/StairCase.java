@@ -1,10 +1,5 @@
 public class StairCase {
 
-//    public static void printStairs(int n){
-//
-//
-//    }
-
     public static void main(String[] args) {
 
         for (int i = 0; i < 6; i++){
