@@ -18,9 +18,6 @@ public class DiagonalDifference {
                 }
             }
         }
-
-//        System.out.printf("%d%n%d%n", rightDiagonalSum, leftDiagonalSum);
-
         return Math.abs(rightDiagonalSum - leftDiagonalSum);
     }
 
