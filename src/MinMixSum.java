@@ -55,4 +55,15 @@ public class MinMixSum {
         }
         System.out.println(min + " " + max);
     }
+
+    public static void sumArray(int[] arr){
+        Arrays.sort(arr);
+
+        long min = 0, max = 0;
+        for (int i = 0, j = arr.length -1; i < arr.length - 1; i++, j--){
+            max = max + arr[j];
+            min = min + arr[i];
+        }
+        System.out.println(min + " " + max);
+    }
 }
