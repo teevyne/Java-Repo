@@ -11,12 +11,16 @@ public class GCDMatrix {
 
     public static void mGcd(int[] a, int[] b)
     {
+        int[][] newAr = new int[a.length][b.length];
+
         for (int i = 0; i < a.length; i++)
         {
             for (int j = 0; j < b.length; j++)
             {
-                System.out.printf("(%d, %d) = %d %n", i, j, gcd(a[i], b[j]));
+                newAr[i][j] = gcd(a[i], b[j]);
+                System.out.printf("%d ", newAr[i][j]);
             }
+            System.out.println();
         }
     }
 
