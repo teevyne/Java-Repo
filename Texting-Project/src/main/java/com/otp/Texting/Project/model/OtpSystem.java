@@ -12,7 +12,4 @@ public class OtpSystem {
     private String mobileNumber;
     private String otp;
     private long expiryTime;
-
-
-
 }
