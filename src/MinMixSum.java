@@ -60,8 +60,8 @@ public class MinMixSum {
         Arrays.sort(arr);
 
         long min = 0, max = 0;
-        for (int i = 0, j = arr.length -1; i < arr.length - 1; i++, j--){
-            max = max + arr[j];
+        for (int i = 0; i < arr.length - 1; i++){
+            max = max + arr[arr.length -1];
             min = min + arr[i];
         }
         System.out.println(min + " " + max);
